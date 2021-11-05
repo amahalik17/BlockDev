@@ -1,15 +1,16 @@
 from brownie import accounts, config, SimpleStorage, network
-
-
+import os
+from web3 import Web3
+import json
 
 def deploy_simple_storage():
-    #account = accounts[0]
-    #account = accounts.load("first-test")
-    #account = accounts.add(config["wallets"] ["from_key"])
     account = get_account()
+    # simple_storage = SimpleStorage.deploy({"from": account})
+    # account = accounts.load("first_acc")
+    # account = accounts.add(config['wallets']['from_key'])
     simple_storage = SimpleStorage.deploy({"from": account})
     stored_value = simple_storage.retrieve()
-    #print(simple_storage)
+    # print(account)
     print(stored_value)
     transaction = simple_storage.store(15, {"from": account})
     transaction.wait(1)
@@ -25,5 +26,4 @@ def get_account():
 
 def main():
     deploy_simple_storage()
-
 
