@@ -24,4 +24,4 @@
 #### The command 'brownie bake chainlink-mix' will initialize the chainlink template with a ton of boiler plate code to build a project upon. I added the template to this folder just for future referencing.
 #
 ## ERC20-Project
-#### 
+#### In this project I am creating my own ERC20 token, using the openzeppelin standard, soon I will run it on the Ethereum mainnet, not just local testnets, still have to run tests and do some fine tuning
